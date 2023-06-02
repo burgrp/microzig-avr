@@ -4,8 +4,7 @@ pub const microzig = @import("deps/microzig/build.zig");
 pub const chips = @import("src/chips.zig");
 
 pub fn build(b: *std.build.Builder) void {
-    const optimize = b.standardOptimizeOption(.{});
-
+    // Build the minimal program for each chip.
     inline for (@typeInfo(chips).Struct.decls) |decl| {
         if (!decl.is_pub)
             continue;
@@ -18,7 +17,8 @@ pub fn build(b: *std.build.Builder) void {
                 .path = "test/programs/minimal.zig",
             },
             .backing = .{ .chip = @field(chips, decl.name) },
-            .optimize = optimize,
+            // We must use ReleaseSmall as Debug build fails due to an LLVM lowering issue.
+            .optimize = std.builtin.OptimizeMode.ReleaseSmall,
         });
 
         exe.installArtifact(b);

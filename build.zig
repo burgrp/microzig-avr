@@ -1,6 +1,6 @@
 const std = @import("std");
-const microzig = @import("deps/microzig/build.zig");
 
+pub const microzig = @import("deps/microzig/build.zig");
 pub const chips = @import("src/chips.zig");
 
 pub fn build(b: *std.build.Builder) void {

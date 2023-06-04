@@ -5,7 +5,9 @@ rm src/chips -rf
 cat >src/chips.zig <<EOF
 const std = @import("std");
 const micro = @import("../deps/microzig/build.zig");
+
 const Chip = micro.Chip;
+const Cpu = micro.Cpu;
 const MemoryRegion = micro.MemoryRegion;
 
 // Generated file, do not edit.
@@ -59,7 +61,18 @@ do
 
 pub const $VAR = Chip{
     .name = "$NAME",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "$NAME",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.$VAR },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         $MEM_DECL
     },

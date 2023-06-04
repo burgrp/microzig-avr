@@ -1,6 +1,8 @@
 const std = @import("std");
 const micro = @import("../deps/microzig/build.zig");
+
 const Chip = micro.Chip;
+const Cpu = micro.Cpu;
 const MemoryRegion = micro.MemoryRegion;
 
 // Generated file, do not edit.
@@ -11,7 +13,18 @@ fn root_dir() []const u8 {
 
 pub const at90can128 = Chip{
     .name = "AT90CAN128",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90CAN128",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90can128 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -26,7 +39,18 @@ pub const at90can128 = Chip{
 
 pub const at90can32 = Chip{
     .name = "AT90CAN32",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90CAN32",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90can32 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -41,7 +65,18 @@ pub const at90can32 = Chip{
 
 pub const at90can64 = Chip{
     .name = "AT90CAN64",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90CAN64",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90can64 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -56,7 +91,18 @@ pub const at90can64 = Chip{
 
 pub const at90pwm161 = Chip{
     .name = "AT90PWM161",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM161",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm161 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -71,7 +117,18 @@ pub const at90pwm161 = Chip{
 
 pub const at90pwm1 = Chip{
     .name = "AT90PWM1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -86,7 +143,18 @@ pub const at90pwm1 = Chip{
 
 pub const at90pwm216 = Chip{
     .name = "AT90PWM216",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM216",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm216 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -101,7 +169,18 @@ pub const at90pwm216 = Chip{
 
 pub const at90pwm2b = Chip{
     .name = "AT90PWM2B",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM2B",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm2b },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -116,7 +195,18 @@ pub const at90pwm2b = Chip{
 
 pub const at90pwm316 = Chip{
     .name = "AT90PWM316",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM316",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm316 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -131,7 +221,18 @@ pub const at90pwm316 = Chip{
 
 pub const at90pwm3 = Chip{
     .name = "AT90PWM3",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM3",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm3 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -146,7 +247,18 @@ pub const at90pwm3 = Chip{
 
 pub const at90pwm3b = Chip{
     .name = "AT90PWM3B",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM3B",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm3b },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -161,7 +273,18 @@ pub const at90pwm3b = Chip{
 
 pub const at90pwm81 = Chip{
     .name = "AT90PWM81",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90PWM81",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90pwm81 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0100, .kind = .ram },
@@ -176,7 +299,18 @@ pub const at90pwm81 = Chip{
 
 pub const at90usb1286 = Chip{
     .name = "AT90USB1286",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB1286",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb1286 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x2000, .kind = .ram },
@@ -191,7 +325,18 @@ pub const at90usb1286 = Chip{
 
 pub const at90usb1287 = Chip{
     .name = "AT90USB1287",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB1287",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb1287 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x2000, .kind = .ram },
@@ -206,7 +351,18 @@ pub const at90usb1287 = Chip{
 
 pub const at90usb162 = Chip{
     .name = "AT90USB162",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB162",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb162 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -221,7 +377,18 @@ pub const at90usb162 = Chip{
 
 pub const at90usb646 = Chip{
     .name = "AT90USB646",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB646",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb646 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -236,7 +403,18 @@ pub const at90usb646 = Chip{
 
 pub const at90usb647 = Chip{
     .name = "AT90USB647",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB647",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb647 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -251,7 +429,18 @@ pub const at90usb647 = Chip{
 
 pub const at90usb82 = Chip{
     .name = "AT90USB82",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "AT90USB82",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.at90usb82 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -266,7 +455,18 @@ pub const at90usb82 = Chip{
 
 pub const atmega1280 = Chip{
     .name = "ATmega1280",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1280",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1280 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -281,7 +481,18 @@ pub const atmega1280 = Chip{
 
 pub const atmega1281 = Chip{
     .name = "ATmega1281",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1281",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1281 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -296,7 +507,18 @@ pub const atmega1281 = Chip{
 
 pub const atmega1284 = Chip{
     .name = "ATmega1284",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1284",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1284 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x4000, .kind = .ram },
@@ -311,7 +533,18 @@ pub const atmega1284 = Chip{
 
 pub const atmega1284p = Chip{
     .name = "ATmega1284P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1284P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1284p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x4000, .kind = .ram },
@@ -326,7 +559,18 @@ pub const atmega1284p = Chip{
 
 pub const atmega1284rfr2 = Chip{
     .name = "ATmega1284RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1284RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1284rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x4000, .kind = .ram },
@@ -341,7 +585,18 @@ pub const atmega1284rfr2 = Chip{
 
 pub const atmega128a = Chip{
     .name = "ATmega128A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega128A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega128a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -356,7 +611,18 @@ pub const atmega128a = Chip{
 
 pub const atmega128 = Chip{
     .name = "ATmega128",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega128",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega128 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -371,7 +637,18 @@ pub const atmega128 = Chip{
 
 pub const atmega128rfa1 = Chip{
     .name = "ATmega128RFA1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega128RFA1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega128rfa1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x4000, .kind = .ram },
@@ -386,7 +663,18 @@ pub const atmega128rfa1 = Chip{
 
 pub const atmega128rfr2 = Chip{
     .name = "ATmega128RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega128RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega128rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x20000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x4000, .kind = .ram },
@@ -401,7 +689,18 @@ pub const atmega128rfr2 = Chip{
 
 pub const atmega1608 = Chip{
     .name = "ATmega1608",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1608",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1608 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3800, .length = 0x800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -416,7 +715,18 @@ pub const atmega1608 = Chip{
 
 pub const atmega1609 = Chip{
     .name = "ATmega1609",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega1609",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega1609 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3800, .length = 0x800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -431,7 +741,18 @@ pub const atmega1609 = Chip{
 
 pub const atmega162 = Chip{
     .name = "ATmega162",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega162",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega162 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -446,7 +767,18 @@ pub const atmega162 = Chip{
 
 pub const atmega164a = Chip{
     .name = "ATmega164A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega164A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega164a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -461,7 +793,18 @@ pub const atmega164a = Chip{
 
 pub const atmega164pa = Chip{
     .name = "ATmega164PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega164PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega164pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -476,7 +819,18 @@ pub const atmega164pa = Chip{
 
 pub const atmega164p = Chip{
     .name = "ATmega164P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega164P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega164p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -491,7 +845,18 @@ pub const atmega164p = Chip{
 
 pub const atmega165a = Chip{
     .name = "ATmega165A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega165A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega165a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -506,7 +871,18 @@ pub const atmega165a = Chip{
 
 pub const atmega165pa = Chip{
     .name = "ATmega165PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega165PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega165pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -521,7 +897,18 @@ pub const atmega165pa = Chip{
 
 pub const atmega165p = Chip{
     .name = "ATmega165P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega165P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega165p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -536,7 +923,18 @@ pub const atmega165p = Chip{
 
 pub const atmega168a = Chip{
     .name = "ATmega168A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega168A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega168a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -551,7 +949,18 @@ pub const atmega168a = Chip{
 
 pub const atmega168 = Chip{
     .name = "ATmega168",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega168",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega168 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -566,7 +975,18 @@ pub const atmega168 = Chip{
 
 pub const atmega168pa = Chip{
     .name = "ATmega168PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega168PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega168pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -581,7 +1001,18 @@ pub const atmega168pa = Chip{
 
 pub const atmega168p = Chip{
     .name = "ATmega168P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega168P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega168p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -596,7 +1027,18 @@ pub const atmega168p = Chip{
 
 pub const atmega168pb = Chip{
     .name = "ATmega168PB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega168PB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega168pb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -611,7 +1053,18 @@ pub const atmega168pb = Chip{
 
 pub const atmega169a = Chip{
     .name = "ATmega169A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega169A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega169a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -626,7 +1079,18 @@ pub const atmega169a = Chip{
 
 pub const atmega169pa = Chip{
     .name = "ATmega169PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega169PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega169pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -641,7 +1105,18 @@ pub const atmega169pa = Chip{
 
 pub const atmega169p = Chip{
     .name = "ATmega169P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega169P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega169p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -656,7 +1131,18 @@ pub const atmega169p = Chip{
 
 pub const atmega16a = Chip{
     .name = "ATmega16A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0400, .kind = .ram },
@@ -671,7 +1157,18 @@ pub const atmega16a = Chip{
 
 pub const atmega16 = Chip{
     .name = "ATmega16",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0400, .kind = .ram },
@@ -686,7 +1183,18 @@ pub const atmega16 = Chip{
 
 pub const atmega16hva = Chip{
     .name = "ATmega16HVA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16HVA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16hva },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -701,7 +1209,18 @@ pub const atmega16hva = Chip{
 
 pub const atmega16hvb = Chip{
     .name = "ATmega16HVB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16HVB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16hvb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -716,7 +1235,18 @@ pub const atmega16hvb = Chip{
 
 pub const atmega16hvbrevb = Chip{
     .name = "ATmega16HVBrevB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16HVBrevB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16hvbrevb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -731,7 +1261,18 @@ pub const atmega16hvbrevb = Chip{
 
 pub const atmega16m1 = Chip{
     .name = "ATmega16M1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16M1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16m1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -746,7 +1287,18 @@ pub const atmega16m1 = Chip{
 
 pub const atmega16u2 = Chip{
     .name = "ATmega16U2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16U2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16u2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -761,7 +1313,18 @@ pub const atmega16u2 = Chip{
 
 pub const atmega16u4 = Chip{
     .name = "ATmega16U4",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega16U4",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega16u4 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0500, .kind = .ram },
@@ -776,7 +1339,18 @@ pub const atmega16u4 = Chip{
 
 pub const atmega2560 = Chip{
     .name = "ATmega2560",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega2560",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega2560 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x40000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -791,7 +1365,18 @@ pub const atmega2560 = Chip{
 
 pub const atmega2561 = Chip{
     .name = "ATmega2561",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega2561",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega2561 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x40000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -806,7 +1391,18 @@ pub const atmega2561 = Chip{
 
 pub const atmega2564rfr2 = Chip{
     .name = "ATmega2564RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega2564RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega2564rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x40000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x8000, .kind = .ram },
@@ -821,7 +1417,18 @@ pub const atmega2564rfr2 = Chip{
 
 pub const atmega256rfr2 = Chip{
     .name = "ATmega256RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega256RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega256rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x40000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x8000, .kind = .ram },
@@ -836,7 +1443,18 @@ pub const atmega256rfr2 = Chip{
 
 pub const atmega3208 = Chip{
     .name = "ATmega3208",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3208",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3208 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3000, .length = 0x1000, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
@@ -851,7 +1469,18 @@ pub const atmega3208 = Chip{
 
 pub const atmega3209 = Chip{
     .name = "ATmega3209",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3209",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3209 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3000, .length = 0x1000, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
@@ -866,7 +1495,18 @@ pub const atmega3209 = Chip{
 
 pub const atmega324a = Chip{
     .name = "ATmega324A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega324A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega324a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -881,7 +1521,18 @@ pub const atmega324a = Chip{
 
 pub const atmega324pa = Chip{
     .name = "ATmega324PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega324PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega324pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -896,7 +1547,18 @@ pub const atmega324pa = Chip{
 
 pub const atmega324p = Chip{
     .name = "ATmega324P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega324P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega324p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -911,7 +1573,18 @@ pub const atmega324p = Chip{
 
 pub const atmega3250a = Chip{
     .name = "ATmega3250A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3250A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3250a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -926,7 +1599,18 @@ pub const atmega3250a = Chip{
 
 pub const atmega3250 = Chip{
     .name = "ATmega3250",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3250",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3250 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -941,7 +1625,18 @@ pub const atmega3250 = Chip{
 
 pub const atmega3250pa = Chip{
     .name = "ATmega3250PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3250PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3250pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -956,7 +1651,18 @@ pub const atmega3250pa = Chip{
 
 pub const atmega3250p = Chip{
     .name = "ATmega3250P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3250P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3250p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -971,7 +1677,18 @@ pub const atmega3250p = Chip{
 
 pub const atmega325a = Chip{
     .name = "ATmega325A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega325A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega325a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -986,7 +1703,18 @@ pub const atmega325a = Chip{
 
 pub const atmega325 = Chip{
     .name = "ATmega325",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega325",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega325 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1001,7 +1729,18 @@ pub const atmega325 = Chip{
 
 pub const atmega325pa = Chip{
     .name = "ATmega325PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega325PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega325pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1016,7 +1755,18 @@ pub const atmega325pa = Chip{
 
 pub const atmega325p = Chip{
     .name = "ATmega325P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega325P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega325p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1031,7 +1781,18 @@ pub const atmega325p = Chip{
 
 pub const atmega328 = Chip{
     .name = "ATmega328",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega328",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega328 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1046,7 +1807,18 @@ pub const atmega328 = Chip{
 
 pub const atmega328p = Chip{
     .name = "ATmega328P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega328P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega328p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1061,7 +1833,18 @@ pub const atmega328p = Chip{
 
 pub const atmega3290a = Chip{
     .name = "ATmega3290A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3290A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3290a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1076,7 +1859,18 @@ pub const atmega3290a = Chip{
 
 pub const atmega3290 = Chip{
     .name = "ATmega3290",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3290",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3290 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1091,7 +1885,18 @@ pub const atmega3290 = Chip{
 
 pub const atmega3290pa = Chip{
     .name = "ATmega3290PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3290PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3290pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1106,7 +1911,18 @@ pub const atmega3290pa = Chip{
 
 pub const atmega3290p = Chip{
     .name = "ATmega3290P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega3290P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega3290p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1121,7 +1937,18 @@ pub const atmega3290p = Chip{
 
 pub const atmega329a = Chip{
     .name = "ATmega329A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega329A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega329a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1136,7 +1963,18 @@ pub const atmega329a = Chip{
 
 pub const atmega329 = Chip{
     .name = "ATmega329",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega329",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega329 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1151,7 +1989,18 @@ pub const atmega329 = Chip{
 
 pub const atmega329pa = Chip{
     .name = "ATmega329PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega329PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega329pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1166,7 +2015,18 @@ pub const atmega329pa = Chip{
 
 pub const atmega329p = Chip{
     .name = "ATmega329P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega329P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega329p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1181,7 +2041,18 @@ pub const atmega329p = Chip{
 
 pub const atmega32a = Chip{
     .name = "ATmega32A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0800, .kind = .ram },
@@ -1196,7 +2067,18 @@ pub const atmega32a = Chip{
 
 pub const atmega32 = Chip{
     .name = "ATmega32",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0800, .kind = .ram },
@@ -1211,7 +2093,18 @@ pub const atmega32 = Chip{
 
 pub const atmega32c1 = Chip{
     .name = "ATmega32C1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32C1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32c1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1226,7 +2119,18 @@ pub const atmega32c1 = Chip{
 
 pub const atmega32hvb = Chip{
     .name = "ATmega32HVB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32HVB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32hvb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1241,7 +2145,18 @@ pub const atmega32hvb = Chip{
 
 pub const atmega32hvbrevb = Chip{
     .name = "ATmega32HVBrevB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32HVBrevB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32hvbrevb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1256,7 +2171,18 @@ pub const atmega32hvbrevb = Chip{
 
 pub const atmega32m1 = Chip{
     .name = "ATmega32M1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32M1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32m1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1271,7 +2197,18 @@ pub const atmega32m1 = Chip{
 
 pub const atmega32u2 = Chip{
     .name = "ATmega32U2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32U2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32u2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1286,7 +2223,18 @@ pub const atmega32u2 = Chip{
 
 pub const atmega32u4 = Chip{
     .name = "ATmega32U4",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega32U4",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega32u4 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x8000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0a00, .kind = .ram },
@@ -1301,7 +2249,18 @@ pub const atmega32u4 = Chip{
 
 pub const atmega406 = Chip{
     .name = "ATmega406",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega406",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega406 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0xa000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0800, .kind = .ram },
@@ -1316,7 +2275,18 @@ pub const atmega406 = Chip{
 
 pub const atmega4808 = Chip{
     .name = "ATmega4808",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega4808",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega4808 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x2800, .length = 0x1800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0xC000, .kind = .flash },
@@ -1331,7 +2301,18 @@ pub const atmega4808 = Chip{
 
 pub const atmega4809 = Chip{
     .name = "ATmega4809",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega4809",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega4809 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x2800, .length = 0x1800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0xC000, .kind = .flash },
@@ -1346,7 +2327,18 @@ pub const atmega4809 = Chip{
 
 pub const atmega48a = Chip{
     .name = "ATmega48A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega48A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega48a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1361,7 +2353,18 @@ pub const atmega48a = Chip{
 
 pub const atmega48 = Chip{
     .name = "ATmega48",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega48",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega48 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1376,7 +2379,18 @@ pub const atmega48 = Chip{
 
 pub const atmega48pa = Chip{
     .name = "ATmega48PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega48PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega48pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1391,7 +2405,18 @@ pub const atmega48pa = Chip{
 
 pub const atmega48p = Chip{
     .name = "ATmega48P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega48P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega48p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1406,7 +2431,18 @@ pub const atmega48p = Chip{
 
 pub const atmega48pb = Chip{
     .name = "ATmega48PB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega48PB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega48pb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1421,7 +2457,18 @@ pub const atmega48pb = Chip{
 
 pub const atmega640 = Chip{
     .name = "ATmega640",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega640",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega640 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -1436,7 +2483,18 @@ pub const atmega640 = Chip{
 
 pub const atmega644a = Chip{
     .name = "ATmega644A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega644A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega644a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1451,7 +2509,18 @@ pub const atmega644a = Chip{
 
 pub const atmega644 = Chip{
     .name = "ATmega644",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega644",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega644 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1466,7 +2535,18 @@ pub const atmega644 = Chip{
 
 pub const atmega644pa = Chip{
     .name = "ATmega644PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega644PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega644pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1481,7 +2561,18 @@ pub const atmega644pa = Chip{
 
 pub const atmega644p = Chip{
     .name = "ATmega644P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega644P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega644p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1496,7 +2587,18 @@ pub const atmega644p = Chip{
 
 pub const atmega644rfr2 = Chip{
     .name = "ATmega644RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega644RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega644rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -1511,7 +2613,18 @@ pub const atmega644rfr2 = Chip{
 
 pub const atmega6450a = Chip{
     .name = "ATmega6450A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6450A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6450a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1526,7 +2639,18 @@ pub const atmega6450a = Chip{
 
 pub const atmega6450 = Chip{
     .name = "ATmega6450",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6450",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6450 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1541,7 +2665,18 @@ pub const atmega6450 = Chip{
 
 pub const atmega6450p = Chip{
     .name = "ATmega6450P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6450P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6450p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1556,7 +2691,18 @@ pub const atmega6450p = Chip{
 
 pub const atmega645a = Chip{
     .name = "ATmega645A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega645A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega645a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1571,7 +2717,18 @@ pub const atmega645a = Chip{
 
 pub const atmega645 = Chip{
     .name = "ATmega645",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega645",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega645 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1586,7 +2743,18 @@ pub const atmega645 = Chip{
 
 pub const atmega645p = Chip{
     .name = "ATmega645P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega645P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega645p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1601,7 +2769,18 @@ pub const atmega645p = Chip{
 
 pub const atmega6490a = Chip{
     .name = "ATmega6490A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6490A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6490a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1616,7 +2795,18 @@ pub const atmega6490a = Chip{
 
 pub const atmega6490 = Chip{
     .name = "ATmega6490",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6490",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6490 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1631,7 +2821,18 @@ pub const atmega6490 = Chip{
 
 pub const atmega6490p = Chip{
     .name = "ATmega6490P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega6490P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega6490p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1646,7 +2847,18 @@ pub const atmega6490p = Chip{
 
 pub const atmega649a = Chip{
     .name = "ATmega649A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega649A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega649a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1661,7 +2873,18 @@ pub const atmega649a = Chip{
 
 pub const atmega649 = Chip{
     .name = "ATmega649",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega649",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega649 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1676,7 +2899,18 @@ pub const atmega649 = Chip{
 
 pub const atmega649p = Chip{
     .name = "ATmega649P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega649P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega649p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1691,7 +2925,18 @@ pub const atmega649p = Chip{
 
 pub const atmega64a = Chip{
     .name = "ATmega64A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1706,7 +2951,18 @@ pub const atmega64a = Chip{
 
 pub const atmega64 = Chip{
     .name = "ATmega64",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1721,7 +2977,18 @@ pub const atmega64 = Chip{
 
 pub const atmega64c1 = Chip{
     .name = "ATmega64C1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64C1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64c1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1736,7 +3003,18 @@ pub const atmega64c1 = Chip{
 
 pub const atmega64hve2 = Chip{
     .name = "ATmega64HVE2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64HVE2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64hve2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1751,7 +3029,18 @@ pub const atmega64hve2 = Chip{
 
 pub const atmega64m1 = Chip{
     .name = "ATmega64M1",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64M1",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64m1 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x1000, .kind = .ram },
@@ -1766,7 +3055,18 @@ pub const atmega64m1 = Chip{
 
 pub const atmega64rfr2 = Chip{
     .name = "ATmega64RFR2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega64RFR2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega64rfr2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x10000, .kind = .flash },
         MemoryRegion{ .offset = 0x0200, .length = 0x2000, .kind = .ram },
@@ -1781,7 +3081,18 @@ pub const atmega64rfr2 = Chip{
 
 pub const atmega808 = Chip{
     .name = "ATmega808",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega808",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega808 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -1796,7 +3107,18 @@ pub const atmega808 = Chip{
 
 pub const atmega809 = Chip{
     .name = "ATmega809",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega809",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega809 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -1811,7 +3133,18 @@ pub const atmega809 = Chip{
 
 pub const atmega8515 = Chip{
     .name = "ATmega8515",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8515",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8515 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -1826,7 +3159,18 @@ pub const atmega8515 = Chip{
 
 pub const atmega8535 = Chip{
     .name = "ATmega8535",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8535",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8535 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -1841,7 +3185,18 @@ pub const atmega8535 = Chip{
 
 pub const atmega88a = Chip{
     .name = "ATmega88A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega88A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega88a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1856,7 +3211,18 @@ pub const atmega88a = Chip{
 
 pub const atmega88 = Chip{
     .name = "ATmega88",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega88",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega88 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1871,7 +3237,18 @@ pub const atmega88 = Chip{
 
 pub const atmega88pa = Chip{
     .name = "ATmega88PA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega88PA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega88pa },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1886,7 +3263,18 @@ pub const atmega88pa = Chip{
 
 pub const atmega88p = Chip{
     .name = "ATmega88P",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega88P",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega88p },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1901,7 +3289,18 @@ pub const atmega88p = Chip{
 
 pub const atmega88pb = Chip{
     .name = "ATmega88PB",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega88PB",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega88pb },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -1916,7 +3315,18 @@ pub const atmega88pb = Chip{
 
 pub const atmega8a = Chip{
     .name = "ATmega8A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0400, .kind = .ram },
@@ -1931,7 +3341,18 @@ pub const atmega8a = Chip{
 
 pub const atmega8 = Chip{
     .name = "ATmega8",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0400, .kind = .ram },
@@ -1946,7 +3367,18 @@ pub const atmega8 = Chip{
 
 pub const atmega8hva = Chip{
     .name = "ATmega8HVA",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8HVA",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8hva },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1961,7 +3393,18 @@ pub const atmega8hva = Chip{
 
 pub const atmega8u2 = Chip{
     .name = "ATmega8U2",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATmega8U2",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.atmega8u2 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -1976,7 +3419,18 @@ pub const atmega8u2 = Chip{
 
 pub const attiny102 = Chip{
     .name = "ATtiny102",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny102",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny102 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
@@ -1991,7 +3445,18 @@ pub const attiny102 = Chip{
 
 pub const attiny104 = Chip{
     .name = "ATtiny104",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny104",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny104 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
@@ -2006,7 +3471,18 @@ pub const attiny104 = Chip{
 
 pub const attiny10 = Chip{
     .name = "ATtiny10",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny10",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny10 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
@@ -2021,7 +3497,18 @@ pub const attiny10 = Chip{
 
 pub const attiny13a = Chip{
     .name = "ATtiny13A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny13A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny13a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0040, .kind = .ram },
@@ -2036,7 +3523,18 @@ pub const attiny13a = Chip{
 
 pub const attiny13 = Chip{
     .name = "ATtiny13",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny13",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny13 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0040, .kind = .ram },
@@ -2051,7 +3549,18 @@ pub const attiny13 = Chip{
 
 pub const attiny1604 = Chip{
     .name = "ATtiny1604",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1604",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1604 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2066,7 +3575,18 @@ pub const attiny1604 = Chip{
 
 pub const attiny1606 = Chip{
     .name = "ATtiny1606",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1606",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1606 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2081,7 +3601,18 @@ pub const attiny1606 = Chip{
 
 pub const attiny1607 = Chip{
     .name = "ATtiny1607",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1607",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1607 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2096,7 +3627,18 @@ pub const attiny1607 = Chip{
 
 pub const attiny1624 = Chip{
     .name = "ATtiny1624",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1624",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1624 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3800, .length = 0x800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2111,7 +3653,18 @@ pub const attiny1624 = Chip{
 
 pub const attiny1626 = Chip{
     .name = "ATtiny1626",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1626",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1626 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3800, .length = 0x800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2126,7 +3679,18 @@ pub const attiny1626 = Chip{
 
 pub const attiny1627 = Chip{
     .name = "ATtiny1627",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1627",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1627 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3800, .length = 0x800, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x4000, .kind = .flash },
@@ -2141,7 +3705,18 @@ pub const attiny1627 = Chip{
 
 pub const attiny1634 = Chip{
     .name = "ATtiny1634",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny1634",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny1634 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0400, .kind = .ram },
@@ -2156,7 +3731,18 @@ pub const attiny1634 = Chip{
 
 pub const attiny167 = Chip{
     .name = "ATtiny167",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny167",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny167 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x4000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -2171,7 +3757,18 @@ pub const attiny167 = Chip{
 
 pub const attiny202 = Chip{
     .name = "ATtiny202",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny202",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny202 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F80, .length = 0x80, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x800, .kind = .flash },
@@ -2186,7 +3783,18 @@ pub const attiny202 = Chip{
 
 pub const attiny204 = Chip{
     .name = "ATtiny204",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny204",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny204 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F80, .length = 0x80, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x800, .kind = .flash },
@@ -2201,7 +3809,18 @@ pub const attiny204 = Chip{
 
 pub const attiny20 = Chip{
     .name = "ATtiny20",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny20",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny20 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x80, .kind = .ram },
@@ -2216,7 +3835,18 @@ pub const attiny20 = Chip{
 
 pub const attiny212 = Chip{
     .name = "ATtiny212",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny212",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny212 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F80, .length = 0x80, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x800, .kind = .flash },
@@ -2231,7 +3861,18 @@ pub const attiny212 = Chip{
 
 pub const attiny214 = Chip{
     .name = "ATtiny214",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny214",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny214 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F80, .length = 0x80, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x800, .kind = .flash },
@@ -2246,7 +3887,18 @@ pub const attiny214 = Chip{
 
 pub const attiny2313a = Chip{
     .name = "ATtiny2313A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny2313A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny2313a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2261,7 +3913,18 @@ pub const attiny2313a = Chip{
 
 pub const attiny2313 = Chip{
     .name = "ATtiny2313",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny2313",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny2313 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2276,7 +3939,18 @@ pub const attiny2313 = Chip{
 
 pub const attiny24a = Chip{
     .name = "ATtiny24A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny24A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny24a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2291,7 +3965,18 @@ pub const attiny24a = Chip{
 
 pub const attiny24 = Chip{
     .name = "ATtiny24",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny24",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny24 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2306,7 +3991,18 @@ pub const attiny24 = Chip{
 
 pub const attiny25 = Chip{
     .name = "ATtiny25",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny25",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny25 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2321,7 +4017,18 @@ pub const attiny25 = Chip{
 
 pub const attiny261a = Chip{
     .name = "ATtiny261A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny261A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny261a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2336,7 +4043,18 @@ pub const attiny261a = Chip{
 
 pub const attiny261 = Chip{
     .name = "ATtiny261",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny261",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny261 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2351,7 +4069,18 @@ pub const attiny261 = Chip{
 
 pub const attiny26 = Chip{
     .name = "ATtiny26",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny26",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny26 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0800, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0080, .kind = .ram },
@@ -2366,7 +4095,18 @@ pub const attiny26 = Chip{
 
 pub const attiny3224 = Chip{
     .name = "ATtiny3224",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny3224",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3224 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
@@ -2381,7 +4121,18 @@ pub const attiny3224 = Chip{
 
 pub const attiny3226 = Chip{
     .name = "ATtiny3226",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny3226",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3226 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
@@ -2396,7 +4147,18 @@ pub const attiny3226 = Chip{
 
 pub const attiny3227 = Chip{
     .name = "ATtiny3227",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny3227",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3227 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
@@ -2411,7 +4173,18 @@ pub const attiny3227 = Chip{
 
 pub const attiny402 = Chip{
     .name = "ATtiny402",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny402",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny402 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2426,7 +4199,18 @@ pub const attiny402 = Chip{
 
 pub const attiny404 = Chip{
     .name = "ATtiny404",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny404",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny404 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2441,7 +4225,18 @@ pub const attiny404 = Chip{
 
 pub const attiny406 = Chip{
     .name = "ATtiny406",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny406",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny406 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2456,7 +4251,18 @@ pub const attiny406 = Chip{
 
 pub const attiny40 = Chip{
     .name = "ATtiny40",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny40",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny40 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x100, .kind = .ram },
@@ -2471,7 +4277,18 @@ pub const attiny40 = Chip{
 
 pub const attiny412 = Chip{
     .name = "ATtiny412",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny412",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny412 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2486,7 +4303,18 @@ pub const attiny412 = Chip{
 
 pub const attiny414 = Chip{
     .name = "ATtiny414",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny414",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny414 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2501,7 +4329,18 @@ pub const attiny414 = Chip{
 
 pub const attiny416 = Chip{
     .name = "ATtiny416",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny416",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny416 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3F00, .length = 0x100, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2516,7 +4355,18 @@ pub const attiny416 = Chip{
 
 pub const attiny424 = Chip{
     .name = "ATtiny424",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny424",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny424 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2531,7 +4381,18 @@ pub const attiny424 = Chip{
 
 pub const attiny426 = Chip{
     .name = "ATtiny426",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny426",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny426 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2546,7 +4407,18 @@ pub const attiny426 = Chip{
 
 pub const attiny427 = Chip{
     .name = "ATtiny427",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny427",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny427 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
@@ -2561,7 +4433,18 @@ pub const attiny427 = Chip{
 
 pub const attiny4313 = Chip{
     .name = "ATtiny4313",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny4313",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny4313 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2576,7 +4459,18 @@ pub const attiny4313 = Chip{
 
 pub const attiny43u = Chip{
     .name = "ATtiny43U",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny43U",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny43u },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2591,7 +4485,18 @@ pub const attiny43u = Chip{
 
 pub const attiny441 = Chip{
     .name = "ATtiny441",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny441",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny441 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0100, .kind = .ram },
@@ -2606,7 +4511,18 @@ pub const attiny441 = Chip{
 
 pub const attiny44a = Chip{
     .name = "ATtiny44A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny44A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny44a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2621,7 +4537,18 @@ pub const attiny44a = Chip{
 
 pub const attiny44 = Chip{
     .name = "ATtiny44",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny44",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny44 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2636,7 +4563,18 @@ pub const attiny44 = Chip{
 
 pub const attiny45 = Chip{
     .name = "ATtiny45",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny45",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny45 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2651,7 +4589,18 @@ pub const attiny45 = Chip{
 
 pub const attiny461a = Chip{
     .name = "ATtiny461A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny461A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny461a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2666,7 +4615,18 @@ pub const attiny461a = Chip{
 
 pub const attiny461 = Chip{
     .name = "ATtiny461",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny461",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny461 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0100, .kind = .ram },
@@ -2681,7 +4641,18 @@ pub const attiny461 = Chip{
 
 pub const attiny48 = Chip{
     .name = "ATtiny48",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny48",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny48 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x1000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0100, .kind = .ram },
@@ -2696,7 +4667,18 @@ pub const attiny48 = Chip{
 
 pub const attiny4 = Chip{
     .name = "ATtiny4",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny4",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny4 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0200, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
@@ -2711,7 +4693,18 @@ pub const attiny4 = Chip{
 
 pub const attiny5 = Chip{
     .name = "ATtiny5",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny5",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny5 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0200, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
@@ -2726,7 +4719,18 @@ pub const attiny5 = Chip{
 
 pub const attiny804 = Chip{
     .name = "ATtiny804",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny804",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny804 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2741,7 +4745,18 @@ pub const attiny804 = Chip{
 
 pub const attiny806 = Chip{
     .name = "ATtiny806",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny806",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny806 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2756,7 +4771,18 @@ pub const attiny806 = Chip{
 
 pub const attiny807 = Chip{
     .name = "ATtiny807",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny807",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny807 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2771,7 +4797,18 @@ pub const attiny807 = Chip{
 
 pub const attiny824 = Chip{
     .name = "ATtiny824",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny824",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny824 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2786,7 +4823,18 @@ pub const attiny824 = Chip{
 
 pub const attiny826 = Chip{
     .name = "ATtiny826",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny826",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny826 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2801,7 +4849,18 @@ pub const attiny826 = Chip{
 
 pub const attiny827 = Chip{
     .name = "ATtiny827",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny827",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny827 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
         MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
@@ -2816,7 +4875,18 @@ pub const attiny827 = Chip{
 
 pub const attiny828 = Chip{
     .name = "ATtiny828",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny828",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny828 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -2831,7 +4901,18 @@ pub const attiny828 = Chip{
 
 pub const attiny841 = Chip{
     .name = "ATtiny841",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny841",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny841 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -2846,7 +4927,18 @@ pub const attiny841 = Chip{
 
 pub const attiny84a = Chip{
     .name = "ATtiny84A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny84A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny84a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -2861,7 +4953,18 @@ pub const attiny84a = Chip{
 
 pub const attiny84 = Chip{
     .name = "ATtiny84",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny84",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny84 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -2876,7 +4979,18 @@ pub const attiny84 = Chip{
 
 pub const attiny85 = Chip{
     .name = "ATtiny85",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny85",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny85 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -2891,7 +5005,18 @@ pub const attiny85 = Chip{
 
 pub const attiny861a = Chip{
     .name = "ATtiny861A",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny861A",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny861a },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -2906,7 +5031,18 @@ pub const attiny861a = Chip{
 
 pub const attiny861 = Chip{
     .name = "ATtiny861",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny861",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny861 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0060, .length = 0x0200, .kind = .ram },
@@ -2921,7 +5057,18 @@ pub const attiny861 = Chip{
 
 pub const attiny87 = Chip{
     .name = "ATtiny87",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny87",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny87 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -2936,7 +5083,18 @@ pub const attiny87 = Chip{
 
 pub const attiny88 = Chip{
     .name = "ATtiny88",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny88",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny88 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
         MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
@@ -2951,7 +5109,18 @@ pub const attiny88 = Chip{
 
 pub const attiny9 = Chip{
     .name = "ATtiny9",
-    .cpu = micro.cpus.avr5,
+    .cpu = Cpu{
+        .name = "ATtiny9",
+        .source = .{
+            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+        },
+        .target = std.zig.CrossTarget{
+            .cpu_arch = .avr,
+            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny9 },
+            .os_tag = .freestanding,
+            .abi = .eabi,
+        },
+    },
     .memory_regions = &.{
         MemoryRegion{ .offset = 0x0000, .length = 0x0400, .kind = .flash },
         MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },

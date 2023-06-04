@@ -28,7 +28,13 @@ pub inline fn cbi(comptime reg: u5, comptime bit: u3) void {
 
 pub const vector_table = blk: {
     std.debug.assert(std.mem.eql(u8, "RESET", std.meta.fields(microzig.chip.VectorTable)[0].name));
-    var asm_str: []const u8 = "rjmp microzig_start\n";
+
+    // Tiny devices have 2 bytes per IVT entry, while Mega devices have 4 bytes per IVT entry,
+    // so we need to use the correct jump instruction.
+    // TODO: This is a bit of a hack, we should probably have a better way to recognize the family.
+    const jmp_instr = if (std.mem.eql(u8, microzig.chip.properties.family, "AVR TINY")) "rjmp" else "jmp";
+
+    var asm_str: []const u8 = jmp_instr ++ " microzig_start\n";
 
     const has_interrupts = @hasDecl(root, "microzig_options") and @hasDecl(root.microzig_options, "interrupts");
     if (has_interrupts) {
@@ -58,11 +64,11 @@ pub const vector_table = blk: {
 
                 const isr = make_isr_handler(entry.name, handler);
 
-                break :overload "rjmp " ++ isr.exported_name;
+                break :overload jmp_instr ++ " " ++ isr.exported_name;
             } else {
-                break :overload "rjmp microzig_unhandled_vector";
+                break :overload jmp_instr ++ " microzig_unhandled_vector";
             }
-        } else "rjmp microzig_unhandled_vector";
+        } else jmp_instr ++ " microzig_unhandled_vector";
 
         // reserved entries are modeled as arrays, so we need to repeat the unhandled instruction
         const entryTypeInfo = @typeInfo(entry.type);

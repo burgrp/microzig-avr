@@ -50,13 +50,13 @@ pub const vector_table = blk: {
         }
     }
 
-    inline for (std.meta.fields(microzig.chip.VectorTable)[1..]) |field| {
+    inline for (std.meta.fields(microzig.chip.VectorTable)[1..]) |entry| {
         const new_insn = if (has_interrupts) overload: {
             const interrupts = root.microzig_options.interrupts;
-            if (@hasDecl(interrupts, field.name)) {
-                const handler = @field(interrupts, field.name);
+            if (@hasDecl(interrupts, entry.name)) {
+                const handler = @field(interrupts, entry.name);
 
-                const isr = make_isr_handler(field.name, handler);
+                const isr = make_isr_handler(entry.name, handler);
 
                 break :overload "rjmp " ++ isr.exported_name;
             } else {
@@ -64,7 +64,12 @@ pub const vector_table = blk: {
             }
         } else "rjmp microzig_unhandled_vector";
 
-        asm_str = asm_str ++ new_insn ++ "\n";
+        // reserved entries are modeled as arrays, so we need to repeat the unhandled instruction
+        const entryTypeInfo = @typeInfo(entry.type);
+        const repeat = if (entryTypeInfo == .Array) entryTypeInfo.Array.len else 1;
+        for (repeat) |_| {
+            asm_str = asm_str ++ new_insn ++ "\n";
+        }
     }
 
     const T = struct {

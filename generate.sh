@@ -17,10 +17,18 @@ fn root_dir() []const u8 {
 }
 EOF
 
+# skip these chips for now, as they have no counterpart in std.Target.avr.cpu
+BLACK_LIST="attiny3224 attiny3226 attiny3227 attiny424 attiny426 attiny427 attiny824 attiny826 attiny827 attiny828"
+
 for ATDF in `ls atdf/*/*.atdf`
 do
     NAME=$(basename $ATDF | sed 's/\.atdf//')
     VAR=$(echo $NAME | tr '[:upper:]' '[:lower:]')
+
+    if [[ $BLACK_LIST =~ $VAR ]]; then
+        echo "Skipping $NAME"
+        continue
+    fi
 
     GEN_ZIG="chips/$NAME.zig"
     regz $ATDF -o src/$GEN_ZIG
@@ -64,7 +72,7 @@ pub const $VAR = Chip{
     .cpu = Cpu{
         .name = "$NAME",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,

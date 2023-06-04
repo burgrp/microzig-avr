@@ -13,6 +13,7 @@ Currently, this repository only includes register definitions and does not provi
 ## TODO
 - Implement the HAL.
 - Add board support for a few commonly used (Arduino) boards.
+- Rewrite generate.sh to zig, so we can check std.Target.avr.cpu directly avoiding the black list.
 - Address the issue of chips that fail to generate (e.g., those missing the RAM memory region in ATDF) by either listing them in a generated file or applying local patches.
 
 ## Recommended Zig Version

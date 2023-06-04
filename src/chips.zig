@@ -16,7 +16,7 @@ pub const at90can128 = Chip{
     .cpu = Cpu{
         .name = "AT90CAN128",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -42,7 +42,7 @@ pub const at90can32 = Chip{
     .cpu = Cpu{
         .name = "AT90CAN32",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -68,7 +68,7 @@ pub const at90can64 = Chip{
     .cpu = Cpu{
         .name = "AT90CAN64",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -94,7 +94,7 @@ pub const at90pwm161 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM161",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -120,7 +120,7 @@ pub const at90pwm1 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -146,7 +146,7 @@ pub const at90pwm216 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM216",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -172,7 +172,7 @@ pub const at90pwm2b = Chip{
     .cpu = Cpu{
         .name = "AT90PWM2B",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -198,7 +198,7 @@ pub const at90pwm316 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM316",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -224,7 +224,7 @@ pub const at90pwm3 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM3",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -250,7 +250,7 @@ pub const at90pwm3b = Chip{
     .cpu = Cpu{
         .name = "AT90PWM3B",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -276,7 +276,7 @@ pub const at90pwm81 = Chip{
     .cpu = Cpu{
         .name = "AT90PWM81",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -302,7 +302,7 @@ pub const at90usb1286 = Chip{
     .cpu = Cpu{
         .name = "AT90USB1286",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -328,7 +328,7 @@ pub const at90usb1287 = Chip{
     .cpu = Cpu{
         .name = "AT90USB1287",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -354,7 +354,7 @@ pub const at90usb162 = Chip{
     .cpu = Cpu{
         .name = "AT90USB162",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -380,7 +380,7 @@ pub const at90usb646 = Chip{
     .cpu = Cpu{
         .name = "AT90USB646",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -406,7 +406,7 @@ pub const at90usb647 = Chip{
     .cpu = Cpu{
         .name = "AT90USB647",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -432,7 +432,7 @@ pub const at90usb82 = Chip{
     .cpu = Cpu{
         .name = "AT90USB82",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -458,7 +458,7 @@ pub const atmega1280 = Chip{
     .cpu = Cpu{
         .name = "ATmega1280",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -484,7 +484,7 @@ pub const atmega1281 = Chip{
     .cpu = Cpu{
         .name = "ATmega1281",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -510,7 +510,7 @@ pub const atmega1284 = Chip{
     .cpu = Cpu{
         .name = "ATmega1284",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -536,7 +536,7 @@ pub const atmega1284p = Chip{
     .cpu = Cpu{
         .name = "ATmega1284P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -562,7 +562,7 @@ pub const atmega1284rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega1284RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -588,7 +588,7 @@ pub const atmega128a = Chip{
     .cpu = Cpu{
         .name = "ATmega128A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -614,7 +614,7 @@ pub const atmega128 = Chip{
     .cpu = Cpu{
         .name = "ATmega128",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -640,7 +640,7 @@ pub const atmega128rfa1 = Chip{
     .cpu = Cpu{
         .name = "ATmega128RFA1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -666,7 +666,7 @@ pub const atmega128rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega128RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -692,7 +692,7 @@ pub const atmega1608 = Chip{
     .cpu = Cpu{
         .name = "ATmega1608",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -718,7 +718,7 @@ pub const atmega1609 = Chip{
     .cpu = Cpu{
         .name = "ATmega1609",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -744,7 +744,7 @@ pub const atmega162 = Chip{
     .cpu = Cpu{
         .name = "ATmega162",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -770,7 +770,7 @@ pub const atmega164a = Chip{
     .cpu = Cpu{
         .name = "ATmega164A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -796,7 +796,7 @@ pub const atmega164pa = Chip{
     .cpu = Cpu{
         .name = "ATmega164PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -822,7 +822,7 @@ pub const atmega164p = Chip{
     .cpu = Cpu{
         .name = "ATmega164P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -848,7 +848,7 @@ pub const atmega165a = Chip{
     .cpu = Cpu{
         .name = "ATmega165A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -874,7 +874,7 @@ pub const atmega165pa = Chip{
     .cpu = Cpu{
         .name = "ATmega165PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -900,7 +900,7 @@ pub const atmega165p = Chip{
     .cpu = Cpu{
         .name = "ATmega165P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -926,7 +926,7 @@ pub const atmega168a = Chip{
     .cpu = Cpu{
         .name = "ATmega168A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -952,7 +952,7 @@ pub const atmega168 = Chip{
     .cpu = Cpu{
         .name = "ATmega168",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -978,7 +978,7 @@ pub const atmega168pa = Chip{
     .cpu = Cpu{
         .name = "ATmega168PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1004,7 +1004,7 @@ pub const atmega168p = Chip{
     .cpu = Cpu{
         .name = "ATmega168P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1030,7 +1030,7 @@ pub const atmega168pb = Chip{
     .cpu = Cpu{
         .name = "ATmega168PB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1056,7 +1056,7 @@ pub const atmega169a = Chip{
     .cpu = Cpu{
         .name = "ATmega169A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1082,7 +1082,7 @@ pub const atmega169pa = Chip{
     .cpu = Cpu{
         .name = "ATmega169PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1108,7 +1108,7 @@ pub const atmega169p = Chip{
     .cpu = Cpu{
         .name = "ATmega169P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1134,7 +1134,7 @@ pub const atmega16a = Chip{
     .cpu = Cpu{
         .name = "ATmega16A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1160,7 +1160,7 @@ pub const atmega16 = Chip{
     .cpu = Cpu{
         .name = "ATmega16",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1186,7 +1186,7 @@ pub const atmega16hva = Chip{
     .cpu = Cpu{
         .name = "ATmega16HVA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1212,7 +1212,7 @@ pub const atmega16hvb = Chip{
     .cpu = Cpu{
         .name = "ATmega16HVB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1238,7 +1238,7 @@ pub const atmega16hvbrevb = Chip{
     .cpu = Cpu{
         .name = "ATmega16HVBrevB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1264,7 +1264,7 @@ pub const atmega16m1 = Chip{
     .cpu = Cpu{
         .name = "ATmega16M1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1290,7 +1290,7 @@ pub const atmega16u2 = Chip{
     .cpu = Cpu{
         .name = "ATmega16U2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1316,7 +1316,7 @@ pub const atmega16u4 = Chip{
     .cpu = Cpu{
         .name = "ATmega16U4",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1342,7 +1342,7 @@ pub const atmega2560 = Chip{
     .cpu = Cpu{
         .name = "ATmega2560",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1368,7 +1368,7 @@ pub const atmega2561 = Chip{
     .cpu = Cpu{
         .name = "ATmega2561",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1394,7 +1394,7 @@ pub const atmega2564rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega2564RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1420,7 +1420,7 @@ pub const atmega256rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega256RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1446,7 +1446,7 @@ pub const atmega3208 = Chip{
     .cpu = Cpu{
         .name = "ATmega3208",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1472,7 +1472,7 @@ pub const atmega3209 = Chip{
     .cpu = Cpu{
         .name = "ATmega3209",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1498,7 +1498,7 @@ pub const atmega324a = Chip{
     .cpu = Cpu{
         .name = "ATmega324A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1524,7 +1524,7 @@ pub const atmega324pa = Chip{
     .cpu = Cpu{
         .name = "ATmega324PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1550,7 +1550,7 @@ pub const atmega324p = Chip{
     .cpu = Cpu{
         .name = "ATmega324P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1576,7 +1576,7 @@ pub const atmega3250a = Chip{
     .cpu = Cpu{
         .name = "ATmega3250A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1602,7 +1602,7 @@ pub const atmega3250 = Chip{
     .cpu = Cpu{
         .name = "ATmega3250",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1628,7 +1628,7 @@ pub const atmega3250pa = Chip{
     .cpu = Cpu{
         .name = "ATmega3250PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1654,7 +1654,7 @@ pub const atmega3250p = Chip{
     .cpu = Cpu{
         .name = "ATmega3250P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1680,7 +1680,7 @@ pub const atmega325a = Chip{
     .cpu = Cpu{
         .name = "ATmega325A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1706,7 +1706,7 @@ pub const atmega325 = Chip{
     .cpu = Cpu{
         .name = "ATmega325",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1732,7 +1732,7 @@ pub const atmega325pa = Chip{
     .cpu = Cpu{
         .name = "ATmega325PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1758,7 +1758,7 @@ pub const atmega325p = Chip{
     .cpu = Cpu{
         .name = "ATmega325P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1784,7 +1784,7 @@ pub const atmega328 = Chip{
     .cpu = Cpu{
         .name = "ATmega328",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1810,7 +1810,7 @@ pub const atmega328p = Chip{
     .cpu = Cpu{
         .name = "ATmega328P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1836,7 +1836,7 @@ pub const atmega3290a = Chip{
     .cpu = Cpu{
         .name = "ATmega3290A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1862,7 +1862,7 @@ pub const atmega3290 = Chip{
     .cpu = Cpu{
         .name = "ATmega3290",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1888,7 +1888,7 @@ pub const atmega3290pa = Chip{
     .cpu = Cpu{
         .name = "ATmega3290PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1914,7 +1914,7 @@ pub const atmega3290p = Chip{
     .cpu = Cpu{
         .name = "ATmega3290P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1940,7 +1940,7 @@ pub const atmega329a = Chip{
     .cpu = Cpu{
         .name = "ATmega329A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1966,7 +1966,7 @@ pub const atmega329 = Chip{
     .cpu = Cpu{
         .name = "ATmega329",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -1992,7 +1992,7 @@ pub const atmega329pa = Chip{
     .cpu = Cpu{
         .name = "ATmega329PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2018,7 +2018,7 @@ pub const atmega329p = Chip{
     .cpu = Cpu{
         .name = "ATmega329P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2044,7 +2044,7 @@ pub const atmega32a = Chip{
     .cpu = Cpu{
         .name = "ATmega32A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2070,7 +2070,7 @@ pub const atmega32 = Chip{
     .cpu = Cpu{
         .name = "ATmega32",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2096,7 +2096,7 @@ pub const atmega32c1 = Chip{
     .cpu = Cpu{
         .name = "ATmega32C1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2122,7 +2122,7 @@ pub const atmega32hvb = Chip{
     .cpu = Cpu{
         .name = "ATmega32HVB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2148,7 +2148,7 @@ pub const atmega32hvbrevb = Chip{
     .cpu = Cpu{
         .name = "ATmega32HVBrevB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2174,7 +2174,7 @@ pub const atmega32m1 = Chip{
     .cpu = Cpu{
         .name = "ATmega32M1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2200,7 +2200,7 @@ pub const atmega32u2 = Chip{
     .cpu = Cpu{
         .name = "ATmega32U2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2226,7 +2226,7 @@ pub const atmega32u4 = Chip{
     .cpu = Cpu{
         .name = "ATmega32U4",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2252,7 +2252,7 @@ pub const atmega406 = Chip{
     .cpu = Cpu{
         .name = "ATmega406",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2278,7 +2278,7 @@ pub const atmega4808 = Chip{
     .cpu = Cpu{
         .name = "ATmega4808",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2304,7 +2304,7 @@ pub const atmega4809 = Chip{
     .cpu = Cpu{
         .name = "ATmega4809",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2330,7 +2330,7 @@ pub const atmega48a = Chip{
     .cpu = Cpu{
         .name = "ATmega48A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2356,7 +2356,7 @@ pub const atmega48 = Chip{
     .cpu = Cpu{
         .name = "ATmega48",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2382,7 +2382,7 @@ pub const atmega48pa = Chip{
     .cpu = Cpu{
         .name = "ATmega48PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2408,7 +2408,7 @@ pub const atmega48p = Chip{
     .cpu = Cpu{
         .name = "ATmega48P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2434,7 +2434,7 @@ pub const atmega48pb = Chip{
     .cpu = Cpu{
         .name = "ATmega48PB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2460,7 +2460,7 @@ pub const atmega640 = Chip{
     .cpu = Cpu{
         .name = "ATmega640",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2486,7 +2486,7 @@ pub const atmega644a = Chip{
     .cpu = Cpu{
         .name = "ATmega644A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2512,7 +2512,7 @@ pub const atmega644 = Chip{
     .cpu = Cpu{
         .name = "ATmega644",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2538,7 +2538,7 @@ pub const atmega644pa = Chip{
     .cpu = Cpu{
         .name = "ATmega644PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2564,7 +2564,7 @@ pub const atmega644p = Chip{
     .cpu = Cpu{
         .name = "ATmega644P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2590,7 +2590,7 @@ pub const atmega644rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega644RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2616,7 +2616,7 @@ pub const atmega6450a = Chip{
     .cpu = Cpu{
         .name = "ATmega6450A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2642,7 +2642,7 @@ pub const atmega6450 = Chip{
     .cpu = Cpu{
         .name = "ATmega6450",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2668,7 +2668,7 @@ pub const atmega6450p = Chip{
     .cpu = Cpu{
         .name = "ATmega6450P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2694,7 +2694,7 @@ pub const atmega645a = Chip{
     .cpu = Cpu{
         .name = "ATmega645A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2720,7 +2720,7 @@ pub const atmega645 = Chip{
     .cpu = Cpu{
         .name = "ATmega645",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2746,7 +2746,7 @@ pub const atmega645p = Chip{
     .cpu = Cpu{
         .name = "ATmega645P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2772,7 +2772,7 @@ pub const atmega6490a = Chip{
     .cpu = Cpu{
         .name = "ATmega6490A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2798,7 +2798,7 @@ pub const atmega6490 = Chip{
     .cpu = Cpu{
         .name = "ATmega6490",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2824,7 +2824,7 @@ pub const atmega6490p = Chip{
     .cpu = Cpu{
         .name = "ATmega6490P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2850,7 +2850,7 @@ pub const atmega649a = Chip{
     .cpu = Cpu{
         .name = "ATmega649A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2876,7 +2876,7 @@ pub const atmega649 = Chip{
     .cpu = Cpu{
         .name = "ATmega649",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2902,7 +2902,7 @@ pub const atmega649p = Chip{
     .cpu = Cpu{
         .name = "ATmega649P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2928,7 +2928,7 @@ pub const atmega64a = Chip{
     .cpu = Cpu{
         .name = "ATmega64A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2954,7 +2954,7 @@ pub const atmega64 = Chip{
     .cpu = Cpu{
         .name = "ATmega64",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -2980,7 +2980,7 @@ pub const atmega64c1 = Chip{
     .cpu = Cpu{
         .name = "ATmega64C1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3006,7 +3006,7 @@ pub const atmega64hve2 = Chip{
     .cpu = Cpu{
         .name = "ATmega64HVE2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3032,7 +3032,7 @@ pub const atmega64m1 = Chip{
     .cpu = Cpu{
         .name = "ATmega64M1",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3058,7 +3058,7 @@ pub const atmega64rfr2 = Chip{
     .cpu = Cpu{
         .name = "ATmega64RFR2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3084,7 +3084,7 @@ pub const atmega808 = Chip{
     .cpu = Cpu{
         .name = "ATmega808",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3110,7 +3110,7 @@ pub const atmega809 = Chip{
     .cpu = Cpu{
         .name = "ATmega809",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3136,7 +3136,7 @@ pub const atmega8515 = Chip{
     .cpu = Cpu{
         .name = "ATmega8515",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3162,7 +3162,7 @@ pub const atmega8535 = Chip{
     .cpu = Cpu{
         .name = "ATmega8535",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3188,7 +3188,7 @@ pub const atmega88a = Chip{
     .cpu = Cpu{
         .name = "ATmega88A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3214,7 +3214,7 @@ pub const atmega88 = Chip{
     .cpu = Cpu{
         .name = "ATmega88",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3240,7 +3240,7 @@ pub const atmega88pa = Chip{
     .cpu = Cpu{
         .name = "ATmega88PA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3266,7 +3266,7 @@ pub const atmega88p = Chip{
     .cpu = Cpu{
         .name = "ATmega88P",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3292,7 +3292,7 @@ pub const atmega88pb = Chip{
     .cpu = Cpu{
         .name = "ATmega88PB",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3318,7 +3318,7 @@ pub const atmega8a = Chip{
     .cpu = Cpu{
         .name = "ATmega8A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3344,7 +3344,7 @@ pub const atmega8 = Chip{
     .cpu = Cpu{
         .name = "ATmega8",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3370,7 +3370,7 @@ pub const atmega8hva = Chip{
     .cpu = Cpu{
         .name = "ATmega8HVA",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3396,7 +3396,7 @@ pub const atmega8u2 = Chip{
     .cpu = Cpu{
         .name = "ATmega8U2",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3422,7 +3422,7 @@ pub const attiny102 = Chip{
     .cpu = Cpu{
         .name = "ATtiny102",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3448,7 +3448,7 @@ pub const attiny104 = Chip{
     .cpu = Cpu{
         .name = "ATtiny104",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3474,7 +3474,7 @@ pub const attiny10 = Chip{
     .cpu = Cpu{
         .name = "ATtiny10",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3500,7 +3500,7 @@ pub const attiny13a = Chip{
     .cpu = Cpu{
         .name = "ATtiny13A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3526,7 +3526,7 @@ pub const attiny13 = Chip{
     .cpu = Cpu{
         .name = "ATtiny13",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3552,7 +3552,7 @@ pub const attiny1604 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1604",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3578,7 +3578,7 @@ pub const attiny1606 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1606",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3604,7 +3604,7 @@ pub const attiny1607 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1607",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3630,7 +3630,7 @@ pub const attiny1624 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1624",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3656,7 +3656,7 @@ pub const attiny1626 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1626",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3682,7 +3682,7 @@ pub const attiny1627 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1627",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3708,7 +3708,7 @@ pub const attiny1634 = Chip{
     .cpu = Cpu{
         .name = "ATtiny1634",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3734,7 +3734,7 @@ pub const attiny167 = Chip{
     .cpu = Cpu{
         .name = "ATtiny167",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3760,7 +3760,7 @@ pub const attiny202 = Chip{
     .cpu = Cpu{
         .name = "ATtiny202",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3786,7 +3786,7 @@ pub const attiny204 = Chip{
     .cpu = Cpu{
         .name = "ATtiny204",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3812,7 +3812,7 @@ pub const attiny20 = Chip{
     .cpu = Cpu{
         .name = "ATtiny20",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3838,7 +3838,7 @@ pub const attiny212 = Chip{
     .cpu = Cpu{
         .name = "ATtiny212",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3864,7 +3864,7 @@ pub const attiny214 = Chip{
     .cpu = Cpu{
         .name = "ATtiny214",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3890,7 +3890,7 @@ pub const attiny2313a = Chip{
     .cpu = Cpu{
         .name = "ATtiny2313A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3916,7 +3916,7 @@ pub const attiny2313 = Chip{
     .cpu = Cpu{
         .name = "ATtiny2313",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3942,7 +3942,7 @@ pub const attiny24a = Chip{
     .cpu = Cpu{
         .name = "ATtiny24A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3968,7 +3968,7 @@ pub const attiny24 = Chip{
     .cpu = Cpu{
         .name = "ATtiny24",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -3994,7 +3994,7 @@ pub const attiny25 = Chip{
     .cpu = Cpu{
         .name = "ATtiny25",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4020,7 +4020,7 @@ pub const attiny261a = Chip{
     .cpu = Cpu{
         .name = "ATtiny261A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4046,7 +4046,7 @@ pub const attiny261 = Chip{
     .cpu = Cpu{
         .name = "ATtiny261",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4072,7 +4072,7 @@ pub const attiny26 = Chip{
     .cpu = Cpu{
         .name = "ATtiny26",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4093,90 +4093,12 @@ pub const attiny26 = Chip{
     },
 };
 
-pub const attiny3224 = Chip{
-    .name = "ATtiny3224",
-    .cpu = Cpu{
-        .name = "ATtiny3224",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3224 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny3224.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny3224.json",
-    },
-};
-
-pub const attiny3226 = Chip{
-    .name = "ATtiny3226",
-    .cpu = Cpu{
-        .name = "ATtiny3226",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3226 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny3226.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny3226.json",
-    },
-};
-
-pub const attiny3227 = Chip{
-    .name = "ATtiny3227",
-    .cpu = Cpu{
-        .name = "ATtiny3227",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny3227 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3400, .length = 0xC00, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x8000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny3227.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny3227.json",
-    },
-};
-
 pub const attiny402 = Chip{
     .name = "ATtiny402",
     .cpu = Cpu{
         .name = "ATtiny402",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4202,7 +4124,7 @@ pub const attiny404 = Chip{
     .cpu = Cpu{
         .name = "ATtiny404",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4228,7 +4150,7 @@ pub const attiny406 = Chip{
     .cpu = Cpu{
         .name = "ATtiny406",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4254,7 +4176,7 @@ pub const attiny40 = Chip{
     .cpu = Cpu{
         .name = "ATtiny40",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4280,7 +4202,7 @@ pub const attiny412 = Chip{
     .cpu = Cpu{
         .name = "ATtiny412",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4306,7 +4228,7 @@ pub const attiny414 = Chip{
     .cpu = Cpu{
         .name = "ATtiny414",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4332,7 +4254,7 @@ pub const attiny416 = Chip{
     .cpu = Cpu{
         .name = "ATtiny416",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4353,90 +4275,12 @@ pub const attiny416 = Chip{
     },
 };
 
-pub const attiny424 = Chip{
-    .name = "ATtiny424",
-    .cpu = Cpu{
-        .name = "ATtiny424",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny424 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny424.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny424.json",
-    },
-};
-
-pub const attiny426 = Chip{
-    .name = "ATtiny426",
-    .cpu = Cpu{
-        .name = "ATtiny426",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny426 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny426.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny426.json",
-    },
-};
-
-pub const attiny427 = Chip{
-    .name = "ATtiny427",
-    .cpu = Cpu{
-        .name = "ATtiny427",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny427 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3E00, .length = 0x200, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x1000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny427.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny427.json",
-    },
-};
-
 pub const attiny4313 = Chip{
     .name = "ATtiny4313",
     .cpu = Cpu{
         .name = "ATtiny4313",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4462,7 +4306,7 @@ pub const attiny43u = Chip{
     .cpu = Cpu{
         .name = "ATtiny43U",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4488,7 +4332,7 @@ pub const attiny441 = Chip{
     .cpu = Cpu{
         .name = "ATtiny441",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4514,7 +4358,7 @@ pub const attiny44a = Chip{
     .cpu = Cpu{
         .name = "ATtiny44A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4540,7 +4384,7 @@ pub const attiny44 = Chip{
     .cpu = Cpu{
         .name = "ATtiny44",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4566,7 +4410,7 @@ pub const attiny45 = Chip{
     .cpu = Cpu{
         .name = "ATtiny45",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4592,7 +4436,7 @@ pub const attiny461a = Chip{
     .cpu = Cpu{
         .name = "ATtiny461A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4618,7 +4462,7 @@ pub const attiny461 = Chip{
     .cpu = Cpu{
         .name = "ATtiny461",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4644,7 +4488,7 @@ pub const attiny48 = Chip{
     .cpu = Cpu{
         .name = "ATtiny48",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4665,38 +4509,12 @@ pub const attiny48 = Chip{
     },
 };
 
-pub const attiny4 = Chip{
-    .name = "ATtiny4",
-    .cpu = Cpu{
-        .name = "ATtiny4",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny4 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x0000, .length = 0x0200, .kind = .flash },
-        MemoryRegion{ .offset = 0x0040, .length = 0x20, .kind = .ram },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny4.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny4.json",
-    },
-};
-
 pub const attiny5 = Chip{
     .name = "ATtiny5",
     .cpu = Cpu{
         .name = "ATtiny5",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4722,7 +4540,7 @@ pub const attiny804 = Chip{
     .cpu = Cpu{
         .name = "ATtiny804",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4748,7 +4566,7 @@ pub const attiny806 = Chip{
     .cpu = Cpu{
         .name = "ATtiny806",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4774,7 +4592,7 @@ pub const attiny807 = Chip{
     .cpu = Cpu{
         .name = "ATtiny807",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4795,116 +4613,12 @@ pub const attiny807 = Chip{
     },
 };
 
-pub const attiny824 = Chip{
-    .name = "ATtiny824",
-    .cpu = Cpu{
-        .name = "ATtiny824",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny824 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny824.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny824.json",
-    },
-};
-
-pub const attiny826 = Chip{
-    .name = "ATtiny826",
-    .cpu = Cpu{
-        .name = "ATtiny826",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny826 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny826.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny826.json",
-    },
-};
-
-pub const attiny827 = Chip{
-    .name = "ATtiny827",
-    .cpu = Cpu{
-        .name = "ATtiny827",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny827 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x3C00, .length = 0x400, .kind = .ram },
-        MemoryRegion{ .offset = 0x00, .length = 0x2000, .kind = .flash },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny827.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny827.json",
-    },
-};
-
-pub const attiny828 = Chip{
-    .name = "ATtiny828",
-    .cpu = Cpu{
-        .name = "ATtiny828",
-        .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
-        },
-        .target = std.zig.CrossTarget{
-            .cpu_arch = .avr,
-            .cpu_model = .{ .explicit = &std.Target.avr.cpu.attiny828 },
-            .os_tag = .freestanding,
-            .abi = .eabi,
-        },
-    },
-    .memory_regions = &.{
-        MemoryRegion{ .offset = 0x0000, .length = 0x2000, .kind = .flash },
-        MemoryRegion{ .offset = 0x0100, .length = 0x0200, .kind = .ram },
-    },
-    .source = .{
-        .path = root_dir() ++ "/chips/ATtiny828.zig",
-    },
-    .json_register_schema = .{
-        .path = root_dir() ++ "/chips/ATtiny828.json",
-    },
-};
-
 pub const attiny841 = Chip{
     .name = "ATtiny841",
     .cpu = Cpu{
         .name = "ATtiny841",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4930,7 +4644,7 @@ pub const attiny84a = Chip{
     .cpu = Cpu{
         .name = "ATtiny84A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4956,7 +4670,7 @@ pub const attiny84 = Chip{
     .cpu = Cpu{
         .name = "ATtiny84",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -4982,7 +4696,7 @@ pub const attiny85 = Chip{
     .cpu = Cpu{
         .name = "ATtiny85",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -5008,7 +4722,7 @@ pub const attiny861a = Chip{
     .cpu = Cpu{
         .name = "ATtiny861A",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -5034,7 +4748,7 @@ pub const attiny861 = Chip{
     .cpu = Cpu{
         .name = "ATtiny861",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -5060,7 +4774,7 @@ pub const attiny87 = Chip{
     .cpu = Cpu{
         .name = "ATtiny87",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -5086,7 +4800,7 @@ pub const attiny88 = Chip{
     .cpu = Cpu{
         .name = "ATtiny88",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,
@@ -5112,7 +4826,7 @@ pub const attiny9 = Chip{
     .cpu = Cpu{
         .name = "ATtiny9",
         .source = .{
-            .path = std.fmt.comptimePrint("{s}/../deps/microzig/src/modules/cpus/avr5.zig", .{root_dir()}),
+            .path = std.fmt.comptimePrint("{s}/cpu.zig", .{root_dir()}),
         },
         .target = std.zig.CrossTarget{
             .cpu_arch = .avr,

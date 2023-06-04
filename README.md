@@ -4,7 +4,7 @@ This repository contains a hardware support package for Microchip's AVR ATtiny a
 
 The primary objective of this repository is to provide support for as many devices as possible. To achieve this, we generate all necessary files, including [chips.zig](src/chips.zig), from [ATDF](https://packs.download.microchip.com).
 
-For ATmega328P support, you can also refer to the [microchip-atmega](https://github.com/ZigEmbeddedGroup/microchip-atmega) repository, which currently focuses exclusively on this chip.
+This repository is based on [microchip-atmega](https://github.com/ZigEmbeddedGroup/microchip-atmega), which is currently focused exclusively on ATmega328P only.
 
 ## Hardware Abstraction Layer
 

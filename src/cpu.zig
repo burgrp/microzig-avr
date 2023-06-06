@@ -26,6 +26,22 @@ pub inline fn cbi(comptime reg: u5, comptime bit: u3) void {
     );
 }
 
+// AVR 16bit registers need to be wrtten low byte first, high byte second
+// which is opposite of how Zig writes 16bit values to memory.
+pub fn write_reg16(reg: *volatile u16, value: u16) void {
+    const addr = @ptrToInt(reg);
+    const bytePtr = @intToPtr(*volatile [2]u8, addr);
+    bytePtr.*[0] = @truncate(u8, value);
+    bytePtr.*[1] = @truncate(u8, value >> 8);
+}
+
+// AVR 16bit registers need to be read low byte first, high byte second
+// which is what Zig does when reading 16bit values from memory.
+// We have this function just for consistency.
+pub fn read_reg16(reg: *volatile u16) u16 {
+    return reg.*;
+}
+
 pub const vector_table = blk: {
     std.debug.assert(std.mem.eql(u8, "RESET", std.meta.fields(microzig.chip.VectorTable)[0].name));
 

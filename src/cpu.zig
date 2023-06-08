@@ -26,8 +26,8 @@ pub inline fn cbi(comptime reg: u5, comptime bit: u3) void {
     );
 }
 
-// AVR 16bit registers need to be wrtten low byte first, high byte second
-// which is opposite of how Zig writes 16bit values to memory.
+// AVR 16bit registers need to be wrtten low byte first, high byte second.
+// Thich is opposite of how Zig writes 16bit values to memory.
 pub fn write_reg16(reg: *volatile u16, value: u16) void {
     const addr = @ptrToInt(reg);
     const bytePtr = @intToPtr(*volatile [2]u8, addr);
@@ -35,9 +35,9 @@ pub fn write_reg16(reg: *volatile u16, value: u16) void {
     bytePtr.*[1] = @truncate(u8, value >> 8);
 }
 
-// AVR 16bit registers need to be read low byte first, high byte second
-// which is what Zig does when reading 16bit values from memory.
-// We have this function just for consistency.
+// AVR 16bit registers need to be read low byte first, high byte second.
+// Although this is what Zig does when reading 16bit values from memory,
+// we have this function just for consistency.
 pub fn read_reg16(reg: *volatile u16) u16 {
     return reg.*;
 }

@@ -10,6 +10,10 @@ This repository is based on [microchip-atmega](https://github.com/ZigEmbeddedGro
 
 Currently, this repository only includes register definitions and does not provide a Hardware Abstraction Layer (HAL). However, the development of a HAL is planned for the future.
 
+## Example
+
+Check this [LED blinking example](https://github.com/burgrp/microzig-avr-example).
+
 ## TODO
 - Implement the HAL.
 - Add board support for a few commonly used (Arduino) boards.

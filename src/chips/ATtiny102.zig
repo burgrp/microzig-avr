@@ -47,27 +47,27 @@ pub const devices = struct {
 
         pub const peripherals = struct {
             ///  I/O Port
-            pub const PORTA = @intToPtr(*volatile types.peripherals.PORT.PORTA, 0x0);
+            pub const PORTA = @as(*volatile types.peripherals.PORT.PORTA, @ptrFromInt(0x0));
             ///  Fuses
-            pub const FUSE = @intToPtr(*volatile types.peripherals.FUSE, 0x0);
+            pub const FUSE = @as(*volatile types.peripherals.FUSE, @ptrFromInt(0x0));
             ///  Lockbits
-            pub const LOCKBIT = @intToPtr(*volatile types.peripherals.LOCKBIT, 0x0);
+            pub const LOCKBIT = @as(*volatile types.peripherals.LOCKBIT, @ptrFromInt(0x0));
             ///  I/O Port
-            pub const PORTB = @intToPtr(*volatile types.peripherals.PORT.PORTB, 0x4);
+            pub const PORTB = @as(*volatile types.peripherals.PORT.PORTB, @ptrFromInt(0x4));
             ///  USART
-            pub const USART = @intToPtr(*volatile types.peripherals.USART, 0x8);
+            pub const USART = @as(*volatile types.peripherals.USART, @ptrFromInt(0x8));
             ///  External Interrupts
-            pub const EXINT = @intToPtr(*volatile types.peripherals.EXINT, 0xf);
+            pub const EXINT = @as(*volatile types.peripherals.EXINT, @ptrFromInt(0xf));
             ///  Analog-to-Digital Converter
-            pub const ADC = @intToPtr(*volatile types.peripherals.ADC, 0x17);
+            pub const ADC = @as(*volatile types.peripherals.ADC, @ptrFromInt(0x17));
             ///  Analog Comparator
-            pub const AC = @intToPtr(*volatile types.peripherals.AC, 0x17);
+            pub const AC = @as(*volatile types.peripherals.AC, @ptrFromInt(0x17));
             ///  Timer/Counter, 16-bit
-            pub const TC0 = @intToPtr(*volatile types.peripherals.TC16.TC0, 0x22);
+            pub const TC0 = @as(*volatile types.peripherals.TC16.TC0, @ptrFromInt(0x22));
             ///  Watchdog Timer
-            pub const WDT = @intToPtr(*volatile types.peripherals.WDT, 0x31);
+            pub const WDT = @as(*volatile types.peripherals.WDT, @ptrFromInt(0x31));
             ///  CPU Registers
-            pub const CPU = @intToPtr(*volatile types.peripherals.CPU, 0x32);
+            pub const CPU = @as(*volatile types.peripherals.CPU, @ptrFromInt(0x32));
         };
     };
 };

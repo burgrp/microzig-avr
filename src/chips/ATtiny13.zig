@@ -35,25 +35,25 @@ pub const devices = struct {
 
         pub const peripherals = struct {
             ///  Fuses
-            pub const FUSE = @intToPtr(*volatile types.peripherals.FUSE, 0x0);
+            pub const FUSE = @as(*volatile types.peripherals.FUSE, @ptrFromInt(0x0));
             ///  Lockbits
-            pub const LOCKBIT = @intToPtr(*volatile types.peripherals.LOCKBIT, 0x0);
+            pub const LOCKBIT = @as(*volatile types.peripherals.LOCKBIT, @ptrFromInt(0x0));
             ///  Analog-to-Digital Converter
-            pub const ADC = @intToPtr(*volatile types.peripherals.ADC, 0x23);
+            pub const ADC = @as(*volatile types.peripherals.ADC, @ptrFromInt(0x23));
             ///  Analog Comparator
-            pub const AC = @intToPtr(*volatile types.peripherals.AC, 0x23);
+            pub const AC = @as(*volatile types.peripherals.AC, @ptrFromInt(0x23));
             ///  External Interrupts
-            pub const EXINT = @intToPtr(*volatile types.peripherals.EXINT, 0x35);
+            pub const EXINT = @as(*volatile types.peripherals.EXINT, @ptrFromInt(0x35));
             ///  I/O Port
-            pub const PORTB = @intToPtr(*volatile types.peripherals.PORT.PORTB, 0x36);
+            pub const PORTB = @as(*volatile types.peripherals.PORT.PORTB, @ptrFromInt(0x36));
             ///  EEPROM
-            pub const EEPROM = @intToPtr(*volatile types.peripherals.EEPROM, 0x3c);
+            pub const EEPROM = @as(*volatile types.peripherals.EEPROM, @ptrFromInt(0x3c));
             ///  Watchdog Timer
-            pub const WDT = @intToPtr(*volatile types.peripherals.WDT, 0x41);
+            pub const WDT = @as(*volatile types.peripherals.WDT, @ptrFromInt(0x41));
             ///  CPU Registers
-            pub const CPU = @intToPtr(*volatile types.peripherals.CPU, 0x46);
+            pub const CPU = @as(*volatile types.peripherals.CPU, @ptrFromInt(0x46));
             ///  Timer/Counter, 8-bit
-            pub const TC0 = @intToPtr(*volatile types.peripherals.TC8.TC0, 0x48);
+            pub const TC0 = @as(*volatile types.peripherals.TC8.TC0, @ptrFromInt(0x48));
         };
     };
 };

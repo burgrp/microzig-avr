@@ -51,31 +51,31 @@ pub const devices = struct {
 
         pub const peripherals = struct {
             ///  I/O Port
-            pub const PORTA = @intToPtr(*volatile types.peripherals.PORT.PORTA, 0x0);
+            pub const PORTA = @as(*volatile types.peripherals.PORT.PORTA, @ptrFromInt(0x0));
             ///  Fuses
-            pub const FUSE = @intToPtr(*volatile types.peripherals.FUSE, 0x0);
+            pub const FUSE = @as(*volatile types.peripherals.FUSE, @ptrFromInt(0x0));
             ///  Lockbits
-            pub const LOCKBIT = @intToPtr(*volatile types.peripherals.LOCKBIT, 0x0);
+            pub const LOCKBIT = @as(*volatile types.peripherals.LOCKBIT, @ptrFromInt(0x0));
             ///  I/O Port
-            pub const PORTB = @intToPtr(*volatile types.peripherals.PORT.PORTB, 0x4);
+            pub const PORTB = @as(*volatile types.peripherals.PORT.PORTB, @ptrFromInt(0x4));
             ///  I/O Port
-            pub const PORTC = @intToPtr(*volatile types.peripherals.PORT.PORTC, 0x8);
+            pub const PORTC = @as(*volatile types.peripherals.PORT.PORTC, @ptrFromInt(0x8));
             ///  External Interrupts
-            pub const EXINT = @intToPtr(*volatile types.peripherals.EXINT, 0x9);
+            pub const EXINT = @as(*volatile types.peripherals.EXINT, @ptrFromInt(0x9));
             ///  Analog-to-Digital Converter
-            pub const ADC = @intToPtr(*volatile types.peripherals.ADC, 0xd);
+            pub const ADC = @as(*volatile types.peripherals.ADC, @ptrFromInt(0xd));
             ///  Analog Comparator
-            pub const AC = @intToPtr(*volatile types.peripherals.AC, 0x13);
+            pub const AC = @as(*volatile types.peripherals.AC, @ptrFromInt(0x13));
             ///  Timer/Counter, 8-bit
-            pub const TC0 = @intToPtr(*volatile types.peripherals.TC8.TC0, 0x15);
+            pub const TC0 = @as(*volatile types.peripherals.TC8.TC0, @ptrFromInt(0x15));
             ///  CPU Registers
-            pub const CPU = @intToPtr(*volatile types.peripherals.CPU, 0x1f);
+            pub const CPU = @as(*volatile types.peripherals.CPU, @ptrFromInt(0x1f));
             ///  Two Wire Serial Interface
-            pub const TWI = @intToPtr(*volatile types.peripherals.TWI, 0x28);
+            pub const TWI = @as(*volatile types.peripherals.TWI, @ptrFromInt(0x28));
             ///  Serial Peripheral Interface
-            pub const SPI = @intToPtr(*volatile types.peripherals.SPI, 0x2e);
+            pub const SPI = @as(*volatile types.peripherals.SPI, @ptrFromInt(0x2e));
             ///  Watchdog Timer
-            pub const WDT = @intToPtr(*volatile types.peripherals.WDT, 0x31);
+            pub const WDT = @as(*volatile types.peripherals.WDT, @ptrFromInt(0x31));
         };
     };
 };

@@ -42,75 +42,75 @@ pub const devices = struct {
 
         pub const peripherals = struct {
             ///  Virtual Ports
-            pub const VPORTA = @intToPtr(*volatile types.peripherals.VPORT, 0x0);
+            pub const VPORTA = @as(*volatile types.peripherals.VPORT, @ptrFromInt(0x0));
             ///  Virtual Ports
-            pub const VPORTB = @intToPtr(*volatile types.peripherals.VPORT, 0x4);
+            pub const VPORTB = @as(*volatile types.peripherals.VPORT, @ptrFromInt(0x4));
             ///  Virtual Ports
-            pub const VPORTC = @intToPtr(*volatile types.peripherals.VPORT, 0x8);
+            pub const VPORTC = @as(*volatile types.peripherals.VPORT, @ptrFromInt(0x8));
             ///  General Purpose IO
-            pub const GPIO = @intToPtr(*volatile types.peripherals.GPIO, 0x1c);
+            pub const GPIO = @as(*volatile types.peripherals.GPIO, @ptrFromInt(0x1c));
             ///  CPU
-            pub const CPU = @intToPtr(*volatile types.peripherals.CPU, 0x34);
+            pub const CPU = @as(*volatile types.peripherals.CPU, @ptrFromInt(0x34));
             ///  Reset controller
-            pub const RSTCTRL = @intToPtr(*volatile types.peripherals.RSTCTRL, 0x40);
+            pub const RSTCTRL = @as(*volatile types.peripherals.RSTCTRL, @ptrFromInt(0x40));
             ///  Sleep Controller
-            pub const SLPCTRL = @intToPtr(*volatile types.peripherals.SLPCTRL, 0x50);
+            pub const SLPCTRL = @as(*volatile types.peripherals.SLPCTRL, @ptrFromInt(0x50));
             ///  Clock controller
-            pub const CLKCTRL = @intToPtr(*volatile types.peripherals.CLKCTRL, 0x60);
+            pub const CLKCTRL = @as(*volatile types.peripherals.CLKCTRL, @ptrFromInt(0x60));
             ///  Bod interface
-            pub const BOD = @intToPtr(*volatile types.peripherals.BOD, 0x80);
+            pub const BOD = @as(*volatile types.peripherals.BOD, @ptrFromInt(0x80));
             ///  Voltage reference
-            pub const VREF = @intToPtr(*volatile types.peripherals.VREF, 0xa0);
+            pub const VREF = @as(*volatile types.peripherals.VREF, @ptrFromInt(0xa0));
             ///  Watch-Dog Timer
-            pub const WDT = @intToPtr(*volatile types.peripherals.WDT, 0x100);
+            pub const WDT = @as(*volatile types.peripherals.WDT, @ptrFromInt(0x100));
             ///  Interrupt Controller
-            pub const CPUINT = @intToPtr(*volatile types.peripherals.CPUINT, 0x110);
+            pub const CPUINT = @as(*volatile types.peripherals.CPUINT, @ptrFromInt(0x110));
             ///  CRCSCAN
-            pub const CRCSCAN = @intToPtr(*volatile types.peripherals.CRCSCAN, 0x120);
+            pub const CRCSCAN = @as(*volatile types.peripherals.CRCSCAN, @ptrFromInt(0x120));
             ///  Real-Time Counter
-            pub const RTC = @intToPtr(*volatile types.peripherals.RTC, 0x140);
+            pub const RTC = @as(*volatile types.peripherals.RTC, @ptrFromInt(0x140));
             ///  Event System
-            pub const EVSYS = @intToPtr(*volatile types.peripherals.EVSYS, 0x180);
+            pub const EVSYS = @as(*volatile types.peripherals.EVSYS, @ptrFromInt(0x180));
             ///  Configurable Custom Logic
-            pub const CCL = @intToPtr(*volatile types.peripherals.CCL, 0x1c0);
+            pub const CCL = @as(*volatile types.peripherals.CCL, @ptrFromInt(0x1c0));
             ///  Port Multiplexer
-            pub const PORTMUX = @intToPtr(*volatile types.peripherals.PORTMUX, 0x200);
+            pub const PORTMUX = @as(*volatile types.peripherals.PORTMUX, @ptrFromInt(0x200));
             ///  I/O Ports
-            pub const PORTA = @intToPtr(*volatile types.peripherals.PORT, 0x400);
+            pub const PORTA = @as(*volatile types.peripherals.PORT, @ptrFromInt(0x400));
             ///  I/O Ports
-            pub const PORTB = @intToPtr(*volatile types.peripherals.PORT, 0x420);
+            pub const PORTB = @as(*volatile types.peripherals.PORT, @ptrFromInt(0x420));
             ///  I/O Ports
-            pub const PORTC = @intToPtr(*volatile types.peripherals.PORT, 0x440);
+            pub const PORTC = @as(*volatile types.peripherals.PORT, @ptrFromInt(0x440));
             ///  Analog to Digital Converter
-            pub const ADC0 = @intToPtr(*volatile types.peripherals.ADC, 0x600);
+            pub const ADC0 = @as(*volatile types.peripherals.ADC, @ptrFromInt(0x600));
             ///  Analog Comparator
-            pub const AC0 = @intToPtr(*volatile types.peripherals.AC, 0x670);
+            pub const AC0 = @as(*volatile types.peripherals.AC, @ptrFromInt(0x670));
             ///  Digital to Analog Converter
-            pub const DAC0 = @intToPtr(*volatile types.peripherals.DAC, 0x680);
+            pub const DAC0 = @as(*volatile types.peripherals.DAC, @ptrFromInt(0x680));
             ///  Universal Synchronous and Asynchronous Receiver and Transmitter
-            pub const USART0 = @intToPtr(*volatile types.peripherals.USART, 0x800);
+            pub const USART0 = @as(*volatile types.peripherals.USART, @ptrFromInt(0x800));
             ///  Two-Wire Interface
-            pub const TWI0 = @intToPtr(*volatile types.peripherals.TWI, 0x810);
+            pub const TWI0 = @as(*volatile types.peripherals.TWI, @ptrFromInt(0x810));
             ///  Serial Peripheral Interface
-            pub const SPI0 = @intToPtr(*volatile types.peripherals.SPI, 0x820);
+            pub const SPI0 = @as(*volatile types.peripherals.SPI, @ptrFromInt(0x820));
             ///  16-bit Timer/Counter Type A
-            pub const TCA0 = @intToPtr(*volatile types.peripherals.TCA, 0xa00);
+            pub const TCA0 = @as(*volatile types.peripherals.TCA, @ptrFromInt(0xa00));
             ///  16-bit Timer Type B
-            pub const TCB0 = @intToPtr(*volatile types.peripherals.TCB, 0xa40);
+            pub const TCB0 = @as(*volatile types.peripherals.TCB, @ptrFromInt(0xa40));
             ///  Timer Counter D
-            pub const TCD0 = @intToPtr(*volatile types.peripherals.TCD, 0xa80);
+            pub const TCD0 = @as(*volatile types.peripherals.TCD, @ptrFromInt(0xa80));
             ///  System Configuration Registers
-            pub const SYSCFG = @intToPtr(*volatile types.peripherals.SYSCFG, 0xf01);
+            pub const SYSCFG = @as(*volatile types.peripherals.SYSCFG, @ptrFromInt(0xf01));
             ///  Non-volatile Memory Controller
-            pub const NVMCTRL = @intToPtr(*volatile types.peripherals.NVMCTRL, 0x1000);
+            pub const NVMCTRL = @as(*volatile types.peripherals.NVMCTRL, @ptrFromInt(0x1000));
             ///  Signature row
-            pub const SIGROW = @intToPtr(*volatile types.peripherals.SIGROW, 0x1100);
+            pub const SIGROW = @as(*volatile types.peripherals.SIGROW, @ptrFromInt(0x1100));
             ///  Fuses
-            pub const FUSE = @intToPtr(*volatile types.peripherals.FUSE, 0x1280);
+            pub const FUSE = @as(*volatile types.peripherals.FUSE, @ptrFromInt(0x1280));
             ///  Lockbit
-            pub const LOCKBIT = @intToPtr(*volatile types.peripherals.LOCKBIT, 0x128a);
+            pub const LOCKBIT = @as(*volatile types.peripherals.LOCKBIT, @ptrFromInt(0x128a));
             ///  User Row
-            pub const USERROW = @intToPtr(*volatile types.peripherals.USERROW, 0x1300);
+            pub const USERROW = @as(*volatile types.peripherals.USERROW, @ptrFromInt(0x1300));
         };
     };
 };
